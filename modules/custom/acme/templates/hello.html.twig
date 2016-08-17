@@ -1,0 +1,8 @@
+<div class="acme-hello-text">
+    <h1>{{ data.greetings }} {{ data.name|upper }}</h1>
+</div>
+<ul id="navigation">
+{% for item in navigation %}
+    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+{% endfor %}
+</ul>
