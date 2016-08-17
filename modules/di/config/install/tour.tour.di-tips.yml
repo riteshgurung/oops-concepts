@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies: {  }
+id: di-tips
+label: 'Elements on the User Info page'
+module: di
+routes:
+  - route_name: di.current_user
+tips:
+  di-tips:
+    id: di-tips
+    plugin: text
+    label: 'Elements on the User Info page'
+    body: 'This page is used to show you how to fetch information from D8 services'
+    weight: 1
+  di-title:
+    id: di-title
+    plugin: text
+    label: 'Page Title'
+    location: right
+    body: 'A custom D8 page that has a title'
+    weight: 2
+    attributes:
+      data-class: page-title
+  di-breadcrumbs:
+    id: di-breadcrumbs
+    plugin: text
+    label: 'Breadcrumb'
+    location: bottom
+    body: "Breadcrumbs on an admin page"
+    weight: 3
+    attributes:
+      data-id: system-breadcrumb
+  di-user-info:
+    id: di-user-info
+    plugin: text
+    location: bottom
+    label: 'User Info'
+    body: "This content is brought here using Drupal 8 service and dependency injection"
+    weight: 4
+    attributes:
+      data-id: block-seven-content
