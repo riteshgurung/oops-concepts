@@ -1,0 +1,19 @@
+<?php
+/**
+ * @file
+ * File to update StockExchangeRate BlockType values
+ */
+use Drupal\Component\Serialization\Json;
+
+/**
+ * Implements hook_cron().
+ */
+function day5_cron() {
+//  $client = \Drupal::httpClient();
+//  $get = $client->get('http://dev.markitondemand.com/MODApis/Api/v2/Quote/jsonp?symbol=BAC&callback=myFunction');
+//  $response = $get->getBody();
+//  $json = (string)$response;
+
+//  echo '<pre>';print_r($json);die;
+//  echo '<pre>';print_r(Json::decode($json));die;
+}

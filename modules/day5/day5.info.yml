@@ -1,0 +1,6 @@
+name: Day 5
+type: module
+description: 'Drupal Block System'
+package: D8 Cards
+version: 8.x-1.0
+core: 8.x
