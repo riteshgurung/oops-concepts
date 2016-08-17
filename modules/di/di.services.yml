@@ -1,3 +1,0 @@
-services:
-  di.drupal_version:
-    class: \Drupal\di\Version\DrupalVersion

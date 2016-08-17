@@ -1,6 +1,0 @@
-name: Dependency Injections
-type: module
-description: 'DI for services, plugins, controllers, forms'
-package: Custom
-version: 8.x-1.0
-core: 8.x

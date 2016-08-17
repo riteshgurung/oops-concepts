@@ -1,7 +1,0 @@
-di.current_user:
-  path: 'admin/config/development/current-user'
-  defaults:
-    _controller: '\Drupal\di\Controller\UserInfoController::render'
-    _title: 'User Information'
-  requirements:
-    _permission: 'access content'

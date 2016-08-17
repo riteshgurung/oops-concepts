@@ -1,6 +1,0 @@
-di.di_admin_link:
-  title: 'DI'
-  parent: system.admin_config_development
-  description: 'Custom module for Dependency Injection and other things'
-  route_name: di.current_user
-  weight: -15
