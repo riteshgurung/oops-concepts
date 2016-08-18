@@ -1,16 +1,30 @@
 {% include 'modules/custom/acme/templates/extra.html.twig' %}
 {% set default_value = 'Pokemon Go !!' %}
-{% macro displayinputtext(name, classname, value) %}
+{% macro displayinputtext(type, name, classname, value) %}
+  <div>
   {% set defaultVal = "Pokemon Go!!" %}
-  <input type="text" name="{{ name|default('default') }}" class="{{ classname|default('simple') }}" value="{{ value|default(defaultVal) }}"/>
+    {% if type == "text" %}
+      <input type="text" name="{{ name|default('default') }}" class="{{ classname|default('simple') }}" value="{{ value|default(defaultVal) }}"/>
+    {% elseif type == "select" %}
+      <select name="{{ name|default('default') }}" class="{{ classname|default('simple') }}">
+        {% for option in value %}
+          <option> {{ option }} </option>
+        {% endfor %}
+      </select>
+    {% else %}
+      <textarea name="{{ name|default('default') }}" class="{{ classname|default('simple') }}"> {{ value|default(defaultVal) }}</textarea>
+    }
+    {% endif %}
+  </div>
 {% endmacro %}
 
 {% import _self as form %}
 <div class="acme-hello-text">
     <h1>{{ data.greetings }} {{ data.name|upper }}</h1>
 </div>
-{{ form.displayinputtext('username', 'user') }}
+{{ form.displayinputtext('text', 'username', 'user') }}
 {{ form.displayinputtext() }}
+{{ form.displayinputtext('select', 'username', 'user', [1,2,3,4,5,6]) }}
 <ul id="navigation">
 {% for item in navigation %}
     <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
