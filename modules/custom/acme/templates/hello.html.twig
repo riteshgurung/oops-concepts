@@ -1,8 +1,24 @@
+{% include 'modules/custom/acme/templates/extra.html.twig' %}
+{% set default_value = 'Pokemon Go !!' %}
+{% macro displayinputtext(name, classname, value) %}
+  {% set defaultVal = "Pokemon Go!!" %}
+  <input type="text" name="{{ name|default('default') }}" class="{{ classname|default('simple') }}" value="{{ value|default(defaultVal) }}"/>
+{% endmacro %}
+
+{% import _self as form %}
 <div class="acme-hello-text">
     <h1>{{ data.greetings }} {{ data.name|upper }}</h1>
 </div>
+{{ form.displayinputtext('username', 'user') }}
+{{ form.displayinputtext() }}
 <ul id="navigation">
 {% for item in navigation %}
     <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
 {% endfor %}
 </ul>
+{% include 'core/modules/comment/templates/comment.html.twig' ignore missing with {'parent' : 'Comments section'} %}
+{% verbatim %}
+  {% for item in items %}
+    <h3> {{ item }} </h3>h3>
+  {% endfor %}
+{% endverbatim %}

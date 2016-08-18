@@ -69,5 +69,11 @@ class DefaultController extends ControllerBase {
 
   private function userList() {
     $user_storage = \Drupal::entityManager()->getStorage('user');
+    $query = \Drupal::entityQuery('user')
+    ->condition('status', 1);
+    $data = $query->execute();
+    // print_r($data);
+    // print_r($user_storage->loadMultiple(array_keys($data)));
+    // die();
   }
 }
