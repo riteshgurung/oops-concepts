@@ -26,8 +26,8 @@
 {{ form.displayinputtext() }}
 {{ form.displayinputtext('select', 'username', 'user', [1,2,3,4,5,6]) }}
 <ul id="navigation">
-{% for item in navigation %}
-    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+{% for item in data.user %}
+    <li><a href="{{ item }}">{{ item }}</a></li>
 {% endfor %}
 </ul>
 {% include 'core/modules/comment/templates/comment.html.twig' ignore missing with {'parent' : 'Comments section'} %}
